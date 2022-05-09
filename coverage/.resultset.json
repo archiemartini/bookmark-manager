@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/archieparchie/Desktop/Projects/Week_4/tom-archie-bookmark-manager/app.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/archieparchie/Desktop/Projects/Week_4/tom-archie-bookmark-manager/spec/web_helpers.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/archieparchie/Desktop/Projects/Week_4/tom-archie-bookmark-manager/spec/features/index_feature_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1652106813
+  }
+}
