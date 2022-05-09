@@ -17,5 +17,8 @@ I want to be able to update the list
 So that myself and others can discuss the bookmark
 I want to be able to comment on bookmarks
 
+![User Stories](User_stories_diagram.jpg?raw=true "User Stories")
+
 
 ![Domain model](Domain_model.jpg?raw=true "Domain model")
+
