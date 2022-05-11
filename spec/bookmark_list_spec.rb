@@ -2,19 +2,21 @@ require 'bookmark_list'
 
 describe BookmarkList do
 
-  subject(:subject) { described_class.new([
-    "http://www.makersacademy.com",
-    "http://www.destroyallsoftware.com",
-    "http://www.google.com"
-   ])}
-
   describe '#all' do
     it 'lists the bookmarks saved in the bookmarks list' do
-      expect(subject.all).to eq([
-        "http://www.makersacademy.com",
-        "http://www.destroyallsoftware.com",
-        "http://www.google.com"
-       ])
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+
+      # Add the test data
+      connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+  
+      bookmarks = BookmarkList.all
+  
+      expect(bookmarks).to include('http://www.makersacademy.com')
+      expect(bookmarks).to include('http://www.destroyallsoftware.com')
+      expect(bookmarks).to include('http://www.google.com')
     end
   end
 end
+

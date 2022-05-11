@@ -12,11 +12,8 @@ get '/' do
 end
 
 get '/bookmarks' do
-  @bookmarks = BookmarkList.new([
-    "http://www.makersacademy.com",
-    "http://www.destroyallsoftware.com",
-    "http://www.google.com"
-   ]).all
+  @bookmarks = BookmarkList.all
+  BookmarkList.all
   erb :index
 end
 

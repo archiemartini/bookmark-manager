@@ -14,4 +14,5 @@ group :development, :test do
   gem 'webrick'
   gem 'simplecov'
   gem 'simplecov-console'
+  gem 'pg'
 end

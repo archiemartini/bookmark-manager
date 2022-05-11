@@ -5,8 +5,12 @@ require 'capybara'
 require 'sinatra'
 require 'simplecov'
 require 'simplecov-console'
+require 'pg'
+require_relative './setup_test_database'
 
-ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
+
+
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -22,6 +26,10 @@ Capybara.app = BookmarkManager
 
 
 RSpec.configure do |config|
+
+  config.before(:each) do
+    setup_test_database
+  end
 
   config.expect_with :rspec do |expectations|
 
